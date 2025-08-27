@@ -1,16 +1,9 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header/Header";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import { ModalProvider } from "@/components/context/ModalContext";
+import { ModalWrapper } from "@/components/Modal/ModalWrapper";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,11 +17,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className=" flex-col justify-center items-center  py-[51px] xl:py-[40px] overflow-x-hidden overflow-y-visible w-full relative">
+        <ModalProvider>
+          <header className="w-full flex justify-center  mb-[24px] xl:mb-[67px]">
+            <Header />
+          </header>
+          <main className="flex flex-col justify-center items-center">
+            {children}
+          </main>
+          <ModalWrapper />
+        </ModalProvider>
       </body>
     </html>
   );
 }
+
