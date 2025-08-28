@@ -149,7 +149,6 @@ export default function Home() {
         <ul className="l:flex-row l:flex-wrap xl:flex-nowrap flex flex-col gap-[26px] items-center justify-center mb-[76px]">
           {dataForCard.map((card) => (
             <li key={card.id} className="w-[313px] relative  xl:w-[360px]">
-              {" "}
               <CardRate {...card} />
             </li>
           ))}

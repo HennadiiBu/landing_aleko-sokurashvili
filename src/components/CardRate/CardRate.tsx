@@ -1,5 +1,6 @@
 import React from "react";
 import BlackLight from "../BlackLight/BlackLight";
+import { useModal } from "../context/ModalContext";
 
 type Props = {
   bgColor: string;
@@ -15,12 +16,16 @@ type Props = {
 };
 
 const CardRate = (props: Props) => {
+  const { openModal } = useModal();
+
   return (
     <div
       style={{ background: props.bgColor, color: props.textColor }}
-      className="xl:h-[466px] relative z-[-2] flex flex-col justify-between items-center gap-[22px] py-[32px] px-[24px] min-h-[430px] self-stretch rounded-[28px] shadow-[inset_4px_6px_10px_4px_rgba(167,93,243,0.20)]"
+      className="l:h-[466px] relative z-0 flex flex-col justify-between items-center gap-[22px] py-[22px] px-[24px] min-h-[430px] self-stretch rounded-[28px] shadow-[inset_4px_6px_10px_4px_rgba(167,93,243,0.20)]"
     >
-        {props.bgColor === "#0C0117" && <BlackLight additioanClassName={"left-[-86px] top-[358px]"} />}
+      {props.bgColor === "#0C0117" && (
+        <BlackLight additioanClassName={"left-[-86px] top-[358px]"} />
+      )}
       <div className="flex flex-col gap-[29px]">
         <div className="flex justify-between items-center">
           <p className="font-raleway text-[16px] font-semibold uppercase">
@@ -62,8 +67,9 @@ const CardRate = (props: Props) => {
       </div>
 
       <button
+        onClick={() => openModal("feedback")}
         style={{ background: props.buyBtnBg, color: props.buyBtnText }}
-        className={`w-[248px]  font-manrope text-[14px] font-semibold flex h-[47px] justify-center items-center rounded-[18px]`}
+        className={`cursor-pointer w-[248px]  font-manrope text-[14px] font-semibold flex h-[47px] justify-center items-center rounded-[18px]`}
       >
         Купить
       </button>
