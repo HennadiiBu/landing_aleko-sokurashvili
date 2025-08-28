@@ -102,8 +102,8 @@ export default function Home() {
           <div className="flex flex-col items-start gap-2">
             <div className="flex flex-col xl:items-center xl:justify-center">
               <button
-                onClick={() => openModal()}
-                className="relative flex w-[313px] xl:w-[534px] h-[60px] xl:h-[74px] px-[17.276px] justify-center items-center gap-[8.638px] flex-shrink-0 rounded-[10796.277px] bg-white shadow-[inset_4.319px_6.478px_10.797px_4.319px_rgba(167,93,243,0.2)]"
+                onClick={() => openModal("feedback")}
+                className="cursor-pointer relative flex w-[313px] xl:w-[534px] h-[60px] xl:h-[74px] px-[17.276px] justify-center items-center gap-[8.638px] flex-shrink-0 rounded-[10796.277px] bg-white shadow-[inset_4.319px_6.478px_10.797px_4.319px_rgba(167,93,243,0.2)]"
               >
                 <span className="text-[#000] font-raleway text-[14px] font-semibold leading-[21.595px] not-italic">
                   Купить со скидкой
@@ -140,7 +140,7 @@ export default function Home() {
           height={346}
           alt=""
           priority
-          className="absolute right-[24px] top-[200px] z-[-1] w-auto h-auto"
+          className="absolute right-0 top-[-200px] z-[-1] w-auto h-auto"
         />
 
         <h2 className="text-white text-center font-raleway text-[24px] font-bold leading-normal uppercase mb-[28px]">
@@ -208,8 +208,8 @@ export default function Home() {
           </p>
         </div>
         <button
-          onClick={() => openModal()}
-          className="relative xl:w-[534px] xl:h-[74px] flex w-[313px] h-[60px] px-[17.276px] justify-center items-center gap-[8.638px] flex-shrink-0 rounded-[10796.277px] bg-[linear-gradient(126deg,_#5BDBFD_16.95%,_#7375FF_79.54%,_#DF93FF_140.99%,_#E56F8C_172.25%)] shadow-[inset_4.319px_6.478px_10.797px_4.319px_rgba(167,93,243,0.2)]"
+          onClick={() => openModal("feedback")}
+          className="cursor-pointer relative xl:w-[534px] xl:h-[74px] flex w-[313px] h-[60px] px-[17.276px] justify-center items-center gap-[8.638px] flex-shrink-0 rounded-[10796.277px] bg-[linear-gradient(126deg,_#5BDBFD_16.95%,_#7375FF_79.54%,_#DF93FF_140.99%,_#E56F8C_172.25%)] shadow-[inset_4.319px_6.478px_10.797px_4.319px_rgba(167,93,243,0.2)]"
         >
           <span className="text-[#fff] font-raleway text-[14px] font-semibold leading-[21.595px] not-italic">
             Купить со скидкой

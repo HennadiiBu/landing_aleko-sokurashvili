@@ -44,13 +44,13 @@ export default function Modal({ isOpen, onClose, children }: ModalProps) {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 xl:bg-black/90"
+      className="fixed inset-0 z-50 flex items-center max-l:items-start justify-center bg-black/50 xl:bg-black/90"
       onClick={handleBackdropClick}
     >
-      <div className="xl:shadow-[inset_4px_6px_10px_4px_rgba(167,93,243,0.2)] z-10 overflow-hidden  bg-[#0C0117] rounded-2xl xl:rounded-[28px] shadow-xl w-[393px] xl:w-[410px] relative px-[42px] pb-[41px] xl:pb-[73px] pt-[157px] xl:pt-[90px]">
+      <div className="max-l:p-[40px] xl:shadow-[inset_4px_6px_10px_4px_rgba(167,93,243,0.2)] z-10 overflow-hidden  bg-[#0C0117] rounded-2xl xl:rounded-[28px] shadow-xl w-[393px] xl:w-[410px] relative px-[42px] pb-[41px] xl:pb-[73px] pt-[157px] xl:pt-[90px]">
         <button
           onClick={onClose}
-          className="absolute top-[32px] right-[28px] text-white hover:text-black text-3xl font-bold"
+          className="absolute max-l:top-[10px] max-l:right-[10px] max-l:text-xl top-[32px] right-[28px] text-white hover:text-black text-3xl font-bold"
         >
           ✕
         </button>

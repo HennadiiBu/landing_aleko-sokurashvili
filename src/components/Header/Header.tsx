@@ -2,7 +2,7 @@
 import React from "react";
 import { useModal } from "../context/ModalContext";
 
-const navigationItems = [
+export const navigationItems = [
   { id: 1, title: "Структура" },
   { id: 2, title: "Обо мне" },
   { id: 3, title: "Плюсы" },
@@ -50,6 +50,7 @@ const Header = () => {
         ))}
       </select>
       <button
+      onClick={() => openModal("nav")}
         aria-label="menu button"
         className="flex justify-center items-center w-[35px] h-[35px] cursor-pointer l:hidden"
       >
@@ -70,8 +71,8 @@ const Header = () => {
         </svg>
       </button>
       <button
-        onClick={() => openModal()}
-        className="max-xl:hidden flex w-[190px] h-[40px] px-4 justify-center items-center gap-2 rounded-full bg-[linear-gradient(90deg,#5BDBFD_0.26%,#7375FF_51.07%,#DF93FF_100.96%,#E56F8C_126.34%)] text-white font-raleway text-[12px] font-semibold leading-5"
+        onClick={() => openModal("feedback")}
+        className="cursor-pointer max-xl:hidden flex w-[190px] h-[40px] px-4 justify-center items-center gap-2 rounded-full bg-[linear-gradient(90deg,#5BDBFD_0.26%,#7375FF_51.07%,#DF93FF_100.96%,#E56F8C_126.34%)] text-white font-raleway text-[12px] font-semibold leading-5"
       >
         Купить со скидкой
       </button>

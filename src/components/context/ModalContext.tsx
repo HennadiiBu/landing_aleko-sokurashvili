@@ -2,22 +2,24 @@
 
 import { createContext, useContext, useState, ReactNode } from "react";
 
+type ModalType = "nav" | "feedback" | null;
+
 type ModalContextType = {
-  openModal: () => void;
+   openModal: (type: ModalType) => void;
   closeModal: () => void;
-  isOpen: boolean;
+  modalType: ModalType;
 };
 
 const ModalContext = createContext<ModalContextType | undefined>(undefined);
 
 export const ModalProvider = ({ children }: { children: ReactNode }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [modalType, setModalType] = useState<ModalType>(null);
 
-  const openModal = () => setIsOpen(true);
-  const closeModal = () => setIsOpen(false);
+  const openModal = (type: ModalType) => setModalType(type);
+  const closeModal = () => setModalType(null);
 
   return (
-    <ModalContext.Provider value={{ isOpen, openModal, closeModal }}>
+    <ModalContext.Provider value={{ modalType, openModal, closeModal }}>
       {children}
     </ModalContext.Provider>
   );
