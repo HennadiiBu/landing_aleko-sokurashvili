@@ -29,7 +29,7 @@ const Header = () => {
           Sokurashvili
         </p>
       </div>
-      <nav className="xs:hidden l:block">
+      <nav className="min-xs:hidden min-l:block">
         <ul className="flex xl:gap-[28px] l:gap-[16px] items-center">
           {navigationItems.map((item) => (
             <li key={item.id} className="text-white text-base cursor-pointer">
