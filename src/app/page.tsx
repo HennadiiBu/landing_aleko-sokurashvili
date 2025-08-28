@@ -146,7 +146,7 @@ export default function Home() {
         <h2 className="text-white text-center font-raleway text-[24px] font-bold leading-normal uppercase mb-[28px]">
           Тарифы
         </h2>
-        <ul className="l:flex-row l:flex-wrap xl:flex-nowrap flex flex-col gap-[26px] items-center justify-center mb-[76px]">
+        <ul className="l:flex-row l:flex-wrap xl:flex-nowrap flex flex-col gap-[26px] items-center justify-center mb-[76px]  l:w-[768px]">
           {dataForCard.map((card) => (
             <li key={card.id} className="w-[313px] relative  xl:w-[360px]">
               <CardRate {...card} />
